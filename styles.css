@@ -1,0 +1,114 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ADD8E6; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
+}
+.center-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 90%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    animation: fadeInImage 1s forwards 0.5s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInImage {
+    to { opacity: 1; }
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #2c3e50;
+    background: #e0f7fa; 
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    word-wrap: break-word;
+    opacity: 0;
+    animation: fadeInCaption 1s forwards 1s;
+}
+
+@keyframes fadeInCaption {
+    to { opacity: 1; }
+}
+
+@media screen and (max-width: 600px) {
+    .center-container {
+        padding: 25px 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    button, input[type="file"] {
+        width: 90%;
+    }
+}
